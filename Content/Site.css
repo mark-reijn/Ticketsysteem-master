@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Toegevoegd om de footer aan de onderkant van de pagina vast te zetten*/
+footer {
+    position: fixed;
+    bottom: 0;
+}

@@ -15,10 +15,11 @@
         <h4>Ticket</h4>
         <hr />
         <div class="form-group">
-            @Html.LabelFor(model => model.ApplicatieId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <!-- Ipv Labelfor een normale label omdat anders applicatieid komt te staan -->
+            <label class="control-label col-md-2">Applicatie</label>
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.ApplicatieId, new SelectList(Model.Applicaties, "Id", "Naam"), "Selecteer Applicatie")
-                @Html.ValidationMessageFor(model => model.ApplicatieId, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.ApplicatieId, "", new {@class = "text-danger"})
             </div>
         </div>
 
